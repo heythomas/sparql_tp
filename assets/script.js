@@ -1,3 +1,9 @@
+/**
+ * 
+ * BELLON Thomas, DOMPNIER Thomas, VITRY Benjamin
+ * 
+ */
+
 function makeSPARQLQuery( endpointUrl, sparqlQuery, doneCallback ) {
 	var settings = {
 		headers: { Accept: 'application/sparql-results+json' },
