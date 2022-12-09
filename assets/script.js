@@ -33,7 +33,7 @@ document.getElementById("war").addEventListener("change", function () {
 
     makeSPARQLQuery( ENDPOINT_URL, sparqlQuery, function( data ) {
         data.results.bindings.forEach(element => {
-            L.marker([element.lat.value, element.long.value]).addTo(map).bindPopup('<a href="'+element.item.value+'">'+element.itemLabel.value+'</a>');
+            L.marker([element.lat.value, element.long.value]).addTo(map).bindPopup('<a href="'+element.item.value+'" target="_blank">'+element.itemLabel.value+'</a>');
         });
         d3sparql.forcegraph(data);
         $('.forcegraph').hide();
@@ -175,7 +175,7 @@ function init() {
   // Launch request and then update map/graph.
   makeSPARQLQuery( ENDPOINT_URL, sparqlQuery, function( data ) {
       data.results.bindings.forEach(element => {
-          L.marker([element.lat.value, element.long.value]).addTo(map).bindPopup('<a href="'+element.item.value+'">'+element.itemLabel.value+'</a>');
+          L.marker([element.lat.value, element.long.value]).addTo(map).bindPopup('<a href="'+element.item.value+'" target="_blank">'+element.itemLabel.value+'</a>');
       });
       d3sparql.forcegraph(data)
       $('.forcegraph').hide();
@@ -183,3 +183,4 @@ function init() {
 }
 
 init()
+setTimeout(() => {  $("#promote").fadeOut(); }, 12000);

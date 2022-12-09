@@ -19,6 +19,11 @@
     </select>
     <div id="map"></div>
     <div id="toggler"></div>
+    <div id="promote">
+        <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="thomas-bellon-94baa3174" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/thomas-bellon-94baa3174?trk=profile-badge">Thomas Bellon</a></div>
+        <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="benjamin-vitry-2266b6223" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/benjamin-vitry-2266b6223?trk=profile-badge">Benjamin Vitry</a></div>
+        <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="silvio-dompnier-60180b222" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/silvio-dompnier-60180b222?trk=profile-badge">Silvio Dompnier</a></div>
+    </div>
     <style>
         * {
             margin: 0;
@@ -63,7 +68,23 @@
         #toggler:hover{
             cursor: pointer;
         }
+        #promote{
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            z-index: 10;
+        }
+        #promote > div{
+            display: inline-block;
+        }
+        .badge-base__link, .profile-badge__header{
+            display: none;
+        }
+        .profile-badge{
+            width: 30vh;
+        }
     </style>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
 </body>
